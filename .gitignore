@@ -1,4 +1,7 @@
 
+*.userprefs
+*.suo
+
 BubbleCellWork/BubbleCell/bin/
 BubbleCellWork/BubbleCell/obj/
 BubbleCellWork/BubbleCellApp/bin/
