@@ -83,6 +83,15 @@
     <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\BubbleCell\Bubble.cs">
+      <Link>Bubble.cs</Link>
+    </Compile>
+    <Compile Include="..\BubbleCell\ChatViewController.cs">
+      <Link>ChatViewController.cs</Link>
+    </Compile>
+    <Compile Include="..\BubbleCell\KeyboardController.cs">
+      <Link>KeyboardController.cs</Link>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ChatSession.cs" />
@@ -92,9 +101,17 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\BubbleCell\BubbleCell.csproj">
-      <Project>{6AB5ECF4-A984-47EF-BE4E-96483FAA2BE0}</Project>
-      <Name>BubbleCell</Name>
-    </ProjectReference>
+    <BundleResource Include="..\BubbleCell\ChatBar.png">
+      <Link>ChatBar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\BubbleCell\green.png">
+      <Link>green.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\BubbleCell\grey.png">
+      <Link>grey.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\BubbleCell\SendButton.png">
+      <Link>SendButton.png</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>
