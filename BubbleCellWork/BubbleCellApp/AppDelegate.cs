@@ -59,13 +59,14 @@ namespace BubbleCellApp
 		{
 			UIViewController main;
 
-			if (NSUserDefaults.StandardUserDefaults.BoolForKey ("loggedIn"))
-				main = MakeOptions ();
-			else 
-				main = MakeLogin ();
+            //if (NSUserDefaults.StandardUserDefaults.BoolForKey ("loggedIn"))
+            //    main = MakeOptions ();
+            //else 
+            //    main = MakeLogin ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			window.RootViewController = main;
+			//window.RootViewController = main;
+			window.RootViewController = new KeyboardController();
 			window.MakeKeyAndVisible ();
 
 			return true;
