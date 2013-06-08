@@ -59,14 +59,43 @@ namespace BubbleCellApp
 		{
 			UIViewController main;
 
-            //if (NSUserDefaults.StandardUserDefaults.BoolForKey ("loggedIn"))
-            //    main = MakeOptions ();
-            //else 
-            //    main = MakeLogin ();
+            if (NSUserDefaults.StandardUserDefaults.BoolForKey ("loggedIn"))
+                main = MakeOptions ();
+            else 
+                main = MakeLogin ();
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			//window.RootViewController = main;
-			window.RootViewController = new KeyboardController();
+			window.RootViewController = main;
+
+			/////////
+//			var keyboardController = new KeyboardController ();
+//			window.RootViewController = keyboardController;
+//			keyboardController.AddBubbles (new BubbleCellData [] {
+//				new BubbleCellData {
+//					Position = BubbleCellPosition.Left,
+//					Caption = "One"
+//				},
+//				new BubbleCellData {
+//					Position = BubbleCellPosition.Left,
+//					Caption = "Two"
+//				},
+//			});
+//
+//			var task = new Task (() => {
+//				for (int i=0; i<5; i++)
+//				{
+//					System.Threading.Thread.Sleep (800);
+//
+//					keyboardController.BeginInvokeOnMainThread (() => {
+//						keyboardController.AddBubble (BubbleCellPosition.Left, "Hello");
+//					});
+//				}
+//			});
+//
+//			task.Start ();
+
+
+			/////////
 			window.MakeKeyAndVisible ();
 
 			return true;

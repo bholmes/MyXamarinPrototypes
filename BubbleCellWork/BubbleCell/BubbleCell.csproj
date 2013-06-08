@@ -43,6 +43,7 @@
     <Compile Include="Bubble.cs" />
     <Compile Include="ChatViewController.cs" />
     <Compile Include="KeyboardController.cs" />
+    <Compile Include="BubbleTableSubController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="green.png" />

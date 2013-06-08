@@ -3,6 +3,7 @@ using MonoTouch.ObjCRuntime;
 using MonoTouch.UIKit;
 using System;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace BubbleCell
 {
@@ -12,6 +13,8 @@ namespace BubbleCell
 		UITableView tableView;
 		UIToolbar toolbar;
 		UITextField textField;
+
+		BubbleTableSubController bubbleTableSubController = new BubbleTableSubController ();
 
 		UIView keyboard = null;
 
@@ -40,14 +43,15 @@ namespace BubbleCell
 
 			var backgroundColor = new UIColor ( 0.859f, 0.866f, 0.929f, 1 );
 			var tableRect = View.Bounds;
+			tableRect.Height -= (entryHeight);
 			tableView = new UITableView ( tableRect );
-			tableRect.Height -= entryHeight;
 			tableView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth;
-			//tableView.BackgroundColor = backgroundColor;
+			tableView.BackgroundColor = backgroundColor;
+			bubbleTableSubController.LoadView (tableView);
 
 			toolbar = new UIToolbar ( new RectangleF ( 0, tableRect.Bottom, tableRect.Width, entryHeight ) );
 			toolbar.AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleTopMargin;
-			toolbar.TintColor = UIColor.FromRGB (227, 228, 229);
+			toolbar.TintColor = UIColor.FromRGB (192, 192, 192);
 
 			textField = new UITextField ( new RectangleF ( 10, 6, toolbar.Bounds.Width - 20 - 68, 30 ) );
 
@@ -68,6 +72,16 @@ namespace BubbleCell
 			hideObserver = UIKeyboard.Notifications.ObserveWillHide ( KeyboardWillHide );
 
 			didShowObserver = UIKeyboard.Notifications.ObserveDidShow ( KeyboardDidShow );
+		}
+
+		[Obsolete ("Deprecated in iOS 6.0")]
+		public override void ViewDidUnload ()
+		{
+			willShowObserver.Dispose ();
+			didShowObserver.Dispose ();
+			hideObserver.Dispose ();
+
+			base.ViewDidUnload ();
 		}
 
 		void PanGestureDidChange ( UIPanGestureRecognizer gesture )
@@ -250,6 +264,55 @@ namespace BubbleCell
 		void PlaceKeyboard ( object sender, UIKeyboardEventArgs args )
 		{
 			
+		}
+
+		public SendMessageAction SendMessageAction { get; set; }
+		public event EventHandler<EventArgs> OnSendMessage;
+
+		public void AddBubble (BubbleCellPosition position, string caption)
+		{
+			bubbleTableSubController.AddBubble (position, caption);
+		}
+
+		public void AddBubbles (IEnumerable<BubbleCellData> cellData)
+		{
+			bubbleTableSubController.AddBubbles (cellData);
+		}
+
+		public bool LeftThinking 
+		{
+			get{
+				return bubbleTableSubController.LeftThinking;
+			}
+			set{
+				bubbleTableSubController.LeftThinking = value;
+			}
+		}
+
+		public bool RightThinking 
+		{
+			get{
+				return bubbleTableSubController.RightThinking;
+			}
+			set{
+				bubbleTableSubController.RightThinking = value;
+			}
+		}
+
+		public void ClearMessageText ()
+		{
+
+		}
+
+		public void ScrollToBottom (bool animate)
+		{
+
+		}
+
+		public string MessageText { 
+			get{
+				return string.Empty;
+			}
 		}
 	}
 

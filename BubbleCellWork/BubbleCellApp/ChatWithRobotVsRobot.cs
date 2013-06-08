@@ -23,17 +23,17 @@ namespace BubbleCellApp
 				() => ChatViewController.RightThinking = false,
 
 				() => ChatViewController.LeftThinking = true,
-				() => ChatViewController.AddBubble (true, "A"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Left, "Aaaaa"),
 
 				() => ChatViewController.RightThinking = true,
-				() => ChatViewController.AddBubble (false, "B"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Right, "Bbbbb"),
 
 				() => ChatViewController.LeftThinking = true,
-				() => ChatViewController.AddBubble (false, "C"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Right, "Ccccc"),
 				() => ChatViewController.LeftThinking = false,
 
 				() => ChatViewController.RightThinking = true,
-				() => ChatViewController.AddBubble (true, "D"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Left, "Ddddd"),
 				() => ChatViewController.RightThinking = false,
 
 				() => ChatViewController.LeftThinking = true,
@@ -58,29 +58,29 @@ namespace BubbleCellApp
 
 				() => ChatViewController.LeftThinking = true,
 				() => ChatViewController.RightThinking = true,
-				() => ChatViewController.AddBubble (true, "E"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Left, "Eeeee"),
 				() => ChatViewController.RightThinking = false,
 
 				() => ChatViewController.RightThinking = true,
 				() => ChatViewController.LeftThinking = true,
-				() => ChatViewController.AddBubble (false, "F"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Right, "Fffff"),
 				() => ChatViewController.LeftThinking = false,
 
 				() => ChatViewController.LeftThinking = true,
 				() => ChatViewController.RightThinking = true,
-				() => ChatViewController.AddBubble (false, "G"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Right, "Ggggg"),
 				() => ChatViewController.LeftThinking = false,
 
 				() => ChatViewController.RightThinking = true,
 				() => ChatViewController.LeftThinking = true,
-				() => ChatViewController.AddBubble (true, "H"),
+				() => ChatViewController.AddBubble (BubbleCellPosition.Left, "Hhhhh"),
 				() => ChatViewController.RightThinking = false,
 
 			};
 
 			//			foreach (Action action in actions)
 			//			{
-			//                await System.Threading.Tasks.Task.Delay (500);
+			//                await System.Threading.Tasks.Task.Delay (750);
 			//                action ();
 			//			}
 
@@ -88,7 +88,7 @@ namespace BubbleCellApp
 
 				foreach (Action action in actions)
 				{
-					System.Threading.Thread.Sleep(500);
+					System.Threading.Thread.Sleep(750);
 					ChatViewController.InvokeOnMainThread (() => {
 						action ();
 					});

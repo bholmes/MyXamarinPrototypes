@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BubbleCell;
 
 namespace BubbleCellApp
 {
@@ -40,7 +41,7 @@ namespace BubbleCellApp
 
 					System.Threading.Thread.Sleep (4000);
 					ChatViewController.InvokeOnMainThread (() => {
-						ChatViewController.AddBubble (true, message);
+						ChatViewController.AddBubble (BubbleCellPosition.Left, message);
 					});
 				}
 			});

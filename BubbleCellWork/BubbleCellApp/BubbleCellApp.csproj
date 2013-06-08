@@ -98,6 +98,9 @@
     <Compile Include="ChatWithMom.cs" />
     <Compile Include="ChatWithRobot.cs" />
     <Compile Include="ChatWithRobotVsRobot.cs" />
+    <Compile Include="..\BubbleCell\BubbleTableSubController.cs">
+      <Link>BubbleTableSubController.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>

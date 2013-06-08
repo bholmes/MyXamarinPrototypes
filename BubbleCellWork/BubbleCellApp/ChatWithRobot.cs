@@ -8,13 +8,14 @@ namespace BubbleCellApp
 	{
 		public ChatWithRobot () : base ("Robot")
 		{
-			ChatViewController.AddBubbles (new ChatBubble[] {
-				new ChatBubble (true, "This is the text on the left, what I find fascinating about this is how many lines can fit!"),
-				new ChatBubble (false, "This is some text on the right"),
-				new ChatBubble (true, "Wow, you are very intense!")
+			ChatViewController.AddBubbles (new BubbleCellData[] {
+				new BubbleCellData (BubbleCellPosition.Left, "This is the text on the left, what I find fascinating about this is how many lines can fit!"),
+				new BubbleCellData (BubbleCellPosition.Right, "This is some text on the right"),
+				new BubbleCellData (BubbleCellPosition.Left, "Wow, you are very intense!")
 			});
 
-			ChatViewController.SendMessageAction = SendMessageAction.None;
+			ChatViewController.
+				SendMessageAction = SendMessageAction.None;
 
 			//ChatViewController.OnSendMessage += async (sender, e) => {
 			//    ChatViewController.AddBubble (false, ChatViewController.MessageText);
@@ -32,7 +33,7 @@ namespace BubbleCellApp
 
 			ChatViewController.OnSendMessage += (sender, e) =>
 			{
-				ChatViewController.AddBubble(false, ChatViewController.MessageText);
+				ChatViewController.AddBubble(BubbleCellPosition.Right, ChatViewController.MessageText);
 				ChatViewController.ClearMessageText();
 				ChatViewController.ScrollToBottom(true);
 
@@ -45,7 +46,7 @@ namespace BubbleCellApp
 
 					System.Threading.Thread.Sleep (1500);
 					ChatViewController.BeginInvokeOnMainThread (() => {
-						ChatViewController.AddBubble (true, "Bleep Bloop");
+						ChatViewController.AddBubble (BubbleCellPosition.Left, "Bleep Bloop");
 						ChatViewController.ScrollToBottom (true);
 					});
 				});
