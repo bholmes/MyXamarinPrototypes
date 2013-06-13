@@ -46,9 +46,15 @@
     <Compile Include="BubbleTableSubController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="green.png" />
-    <BundleResource Include="grey.png" />
     <BundleResource Include="SendButton.png" />
     <BundleResource Include="ChatBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\left-blue.png" />
+    <BundleResource Include="images\left-green.png" />
+    <BundleResource Include="images\left-white.png" />
+    <BundleResource Include="images\right-blue.png" />
+    <BundleResource Include="images\right-green.png" />
+    <BundleResource Include="images\right-white.png" />
   </ItemGroup>
 </Project>
