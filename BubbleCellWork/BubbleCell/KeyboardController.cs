@@ -17,15 +17,9 @@ namespace BubbleCell
 		BubbleTableSubController bubbleTableSubController = new BubbleTableSubController ();
 
 		UIView keyboard = null;
-
 		NSObject willShowObserver, didShowObserver, hideObserver;
-
-		//Action<RectangleF> keyboardDidMoveBlock;
-		//UIResponder keyboardActiveInput;
-		//UIView keyboardActiveView;
 		UIPanGestureRecognizer keyboardPanRecognizer;
-		//RectangleF previousKeyboardRect;
-		//bool panning = false;
+
 
 		const int entryHeight = 40;
 
