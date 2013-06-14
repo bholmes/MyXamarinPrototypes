@@ -47,6 +47,7 @@
     <Compile Include="MessageBarController.cs" />
     <Compile Include="MessageBarView.cs" />
     <Compile Include="MyExtensions.cs" />
+    <Compile Include="SendMessageAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="SendButton.png" />

@@ -22,5 +22,10 @@ namespace BubbleCell
 					return UIViewAnimationOptions.CurveLinear;
 			}
 		}
+
+		internal static BubbleCellPosition ToBubbleCellPosition ( this SendMessageAction action )
+		{
+			return action == SendMessageAction.Left ? BubbleCellPosition.Left : BubbleCellPosition.Right;
+		}
 	}
 }

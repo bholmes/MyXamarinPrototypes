@@ -17,12 +17,6 @@ using System.Drawing;
 
 namespace BubbleCell
 {
-	public enum SendMessageAction {
-		Right,
-		Left,
-		None
-	}
-
 	[Register ("ChatViewController")]
 	public class ChatViewController : UIViewController {
 		DialogViewController discussion;

@@ -101,6 +101,9 @@
     <Compile Include="..\BubbleCell\MyExtensions.cs">
       <Link>MyExtensions.cs</Link>
     </Compile>
+    <Compile Include="..\BubbleCell\SendMessageAction.cs">
+      <Link>SendMessageAction.cs</Link>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ChatSession.cs" />
