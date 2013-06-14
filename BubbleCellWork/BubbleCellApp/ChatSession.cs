@@ -7,11 +7,11 @@ namespace BubbleCellApp
 	{
 		protected ChatSession (string title)
 		{
-			ChatViewController = new KeyboardController ();
+			ChatViewController = new ChatViewController ();
 			ChatViewController.Title = title;
 		}
 
-		public KeyboardController ChatViewController { get; private set;}
+		public ChatViewController ChatViewController { get; private set;}
 	}
 }
 

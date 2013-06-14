@@ -41,6 +41,9 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Bubble.cs" />
+    <Compile Include="BubbleCellData.cs" />
+    <Compile Include="BubbleCellPosition.cs" />
+    <Compile Include="BubbleCellWithText.cs" />
     <Compile Include="ChatViewController.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="BubbleTableSubController.cs" />
@@ -48,10 +51,11 @@
     <Compile Include="MessageBarView.cs" />
     <Compile Include="MyExtensions.cs" />
     <Compile Include="SendMessageAction.cs" />
+    <Compile Include="ThinkingBubbleCell.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="SendButton.png" />
-    <BundleResource Include="ChatBar.png" />
+    <BundleResource Include="images\SendButton.png" />
+    <BundleResource Include="images\ChatBar.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="images\left-blue.png" />

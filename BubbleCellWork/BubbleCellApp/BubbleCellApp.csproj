@@ -83,72 +83,18 @@
     <None Include="Info.plist" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\BubbleCell\Bubble.cs">
-      <Link>Bubble.cs</Link>
-    </Compile>
-    <Compile Include="..\BubbleCell\ChatViewController.cs">
-      <Link>ChatViewController.cs</Link>
-    </Compile>
-    <Compile Include="..\BubbleCell\KeyboardController.cs">
-      <Link>KeyboardController.cs</Link>
-    </Compile>
-    <Compile Include="..\BubbleCell\MessageBarController.cs">
-      <Link>MessageBarController.cs</Link>
-    </Compile>
-    <Compile Include="..\BubbleCell\MessageBarView.cs">
-      <Link>MessageBarView.cs</Link>
-    </Compile>
-    <Compile Include="..\BubbleCell\MyExtensions.cs">
-      <Link>MyExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\BubbleCell\SendMessageAction.cs">
-      <Link>SendMessageAction.cs</Link>
-    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ChatSession.cs" />
     <Compile Include="ChatWithMom.cs" />
     <Compile Include="ChatWithRobot.cs" />
     <Compile Include="ChatWithRobotVsRobot.cs" />
-    <Compile Include="..\BubbleCell\BubbleTableSubController.cs">
-      <Link>BubbleTableSubController.cs</Link>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
-    <BundleResource Include="..\BubbleCell\ChatBar.png">
-      <Link>ChatBar.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\SendButton.png">
-      <Link>SendButton.png</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\BubbleCell\images\left-blue.png">
-      <Link>images\left-blue.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\images\left-green.png">
-      <Link>images\left-green.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\images\left-white.png">
-      <Link>images\left-white.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\images\right-blue.png">
-      <Link>images\right-blue.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\images\right-green.png">
-      <Link>images\right-green.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\images\right-white.png">
-      <Link>images\right-white.png</Link>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\BubbleCell\images\left-thinking.png">
-      <Link>images\left-thinking.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\BubbleCell\images\right-thinking.png">
-      <Link>images\right-thinking.png</Link>
-    </BundleResource>
+    <ProjectReference Include="..\BubbleCell\BubbleCell.csproj">
+      <Project>{6ab5ecf4-a984-47ef-be4e-96483faa2be0}</Project>
+      <Name>BubbleCell</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

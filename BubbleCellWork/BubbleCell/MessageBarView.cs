@@ -25,7 +25,7 @@ namespace BubbleCell
 			{
 				ClearsContextBeforeDrawing = false,
 				AutoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth,
-				Image = UIImage.FromFile ( "ChatBar.png" ).StretchableImage ( 18, 20 ),
+				Image = UIImage.FromFile ( "images/ChatBar.png" ).StretchableImage ( 18, 20 ),
 				UserInteractionEnabled = true
 			};
 			AddSubview ( ChatBar );
@@ -52,7 +52,7 @@ namespace BubbleCell
 			SendButton.Frame = new RectangleF ( ChatBar.Frame.Width - 70, 8, 64, 26 );
 			SendButton.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 
-			var sendBackground = UIImage.FromFile ( "SendButton.png" );
+			var sendBackground = UIImage.FromFile ( "images/SendButton.png" );
 			SendButton.SetBackgroundImage ( sendBackground, UIControlState.Normal );
 			SendButton.SetBackgroundImage ( sendBackground, UIControlState.Disabled );
 			SendButton.TitleLabel.Font = UIFont.BoldSystemFontOfSize ( 16 );
