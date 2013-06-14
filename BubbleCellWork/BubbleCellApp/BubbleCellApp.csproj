@@ -92,6 +92,15 @@
     <Compile Include="..\BubbleCell\KeyboardController.cs">
       <Link>KeyboardController.cs</Link>
     </Compile>
+    <Compile Include="..\BubbleCell\MessageBarController.cs">
+      <Link>MessageBarController.cs</Link>
+    </Compile>
+    <Compile Include="..\BubbleCell\MessageBarView.cs">
+      <Link>MessageBarView.cs</Link>
+    </Compile>
+    <Compile Include="..\BubbleCell\MyExtensions.cs">
+      <Link>MyExtensions.cs</Link>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ChatSession.cs" />

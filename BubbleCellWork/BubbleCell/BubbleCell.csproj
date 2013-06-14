@@ -44,6 +44,9 @@
     <Compile Include="ChatViewController.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="BubbleTableSubController.cs" />
+    <Compile Include="MessageBarController.cs" />
+    <Compile Include="MessageBarView.cs" />
+    <Compile Include="MyExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="SendButton.png" />
