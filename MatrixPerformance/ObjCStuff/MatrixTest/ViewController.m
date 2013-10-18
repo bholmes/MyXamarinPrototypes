@@ -38,13 +38,6 @@
     int count = (int)self.matrixSizeStepper.value;
     
     return (int)pow(2, count+8);
-    
-    int value = 256;
-    
-    for (int i=1; i<count; i++)
-        value *= 2;
-    
-    return value;
 }
 
 -(void) updateMatrixSizeLabel

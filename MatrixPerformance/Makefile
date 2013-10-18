@@ -17,4 +17,4 @@ libMatrixTestLibSDK.a: libMatrixTestLib-i386.a libMatrixTestLib-armv7.a
 	lipo -create -output $@ $^
 
 clean:
-	-rm -f *.a *.dll
+	-rm -rf *.a *.dll build

@@ -514,6 +514,7 @@
 				21412D881810CEF9000B8E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21412D891810CEF9000B8E30 /* Build configuration list for PBXNativeTarget "MatrixTestTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				21412D8B1810CEF9000B8E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
